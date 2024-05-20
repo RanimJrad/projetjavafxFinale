@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignInController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="main_form" layoutX="320.0" prefHeight="424.0" prefWidth="320.0" styleClass="right-form" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="118.0" layoutY="134.0" prefHeight="41.0" prefWidth="72.0" text="Sign In">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="44.0" layoutY="212.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <PasswordField fx:id="password" layoutX="44.0" layoutY="268.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <Button fx:id="loginBtn" layoutX="104.0" layoutY="346.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="31.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Sign in" />
+                  <Button fx:id="close" layoutX="277.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@loginDesign.css" text="X">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="USER" layoutX="125.0" layoutY="123.0" size="5em" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="424.0" prefWidth="320.0" styleClass="left-form" stylesheets="@loginDesign.css" visible="false">
+                     <children>
+                        <Label layoutX="58.0" layoutY="143.0" text="RS BOOK" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Italic" size="48.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="111.0" layoutY="117.0" size="7em" />
+                        <Label layoutX="80.0" layoutY="317.0" prefHeight="41.0" prefWidth="159.0" text="Create Account" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="loginBtn11" layoutX="107.0" layoutY="366.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="31.0" prefWidth="100.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Create" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="su_signupForm" layoutY="5.0" prefHeight="424.0" prefWidth="320.0" styleClass="right-form" stylesheets="@loginDesign.css">
+                     <children>
+                        <Label layoutX="118.0" layoutY="134.0" prefHeight="41.0" prefWidth="83.0" text="Sign Up">
+                           <font>
+                              <Font name="Berlin Sans FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="su_username" layoutX="44.0" layoutY="212.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <PasswordField fx:id="su_password" layoutX="44.0" layoutY="268.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <Button fx:id="su_signupBtn" layoutX="104.0" layoutY="346.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="31.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Sign up" />
+                        <FontAwesomeIcon glyphName="USER" layoutX="125.0" layoutY="123.0" size="5em" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="side_form" prefHeight="429.0" prefWidth="320.0" styleClass="left-form" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="58.0" layoutY="143.0" text="RS BOOK" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Italic" size="48.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="111.0" layoutY="117.0" size="7em" />
+                  <Label layoutX="80.0" layoutY="317.0" prefHeight="41.0" prefWidth="159.0" text="Create Account" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="side_CreateBtn" layoutX="47.0" layoutY="365.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="31.0" prefWidth="198.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Create" />
+                  <Button fx:id="side_alreadyHave" layoutX="47.0" layoutY="365.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="31.0" prefWidth="198.0" styleClass="create-btn" stylesheets="@loginDesign.css" text="Already have an account" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
